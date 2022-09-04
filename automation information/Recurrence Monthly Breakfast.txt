@@ -1,0 +1,145 @@
+Desayuno Mensual de Recurrencias
+
+importante:
+* en este navegador Firefox el inicio de la automatizacion es mas lenta.
+
+* se hizo modificacion de inspeccion de elementos para entrar a la ventana de Dining pues su elemento inspeccionado abria una ventana diferente (Activity) asi que se le coloco el elemento de inspeccion de la ventana de Repairs y de esa forma se pudo entrar a la ventana de dining.
+${Dinning}                  id=SideNav_Menu_Dinning		entras a la ventana de activity
+${Dinning}                  id=SideNav_Menu_Repairs		si puedes entrar a la ventana dining
+
+* para dar click al boton de calendario en la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
+  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
+
+ ${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
+  * Press Keys         ${Calendar_Btn}    Enter (correcto)
+  * click element      ${Calendar_Btn}     (no funciona)
+  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+ * para dar click al boton de calendario dentro de la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
+  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
+   * Press Keys        ${Calendar_Recurrences}   Enter (correcto)
+  ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
+  click element       ${Calendar_Recurrences}
+  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+* dentro de la ventana de las recurrencias en "Does Not Repeat" el entrar al boton de cancel no funcino su id se utilizo javaScript
+  ${CancelBtnRecc}            id=cancelRecurrence
+  #   click element              ${CancelBtnRecc}
+   execute javascript      document.getElementsByClassName('MuiGrid-root appbtn-engage greyCancelBtn-engage appbtnBarButton')[0].click()
+
+
+* elegir un dia en especifico dentro del calendario si tiene Id Pero no hace la funcion de dar click sobre el se utiliza Execute Javascript
+ id="Calendar_Icon_Adornment_28"
+  execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
+
+
+
+
+
+
+
+
+PR01 Automatización para ingresar a Comunidad Waterford Recurrencia Mensual (Desayuno)
+
+Automatización Recurrencia Mensual
+
+Información general
+
+1.- llenar los campos correctamente (title, description, image)
+2.- enter Add translations Window
+    * entrar boton de lenguaje french y regresar al boton Spanich(default)
+    * cerrar la ventana en el boton de "OK"
+3.- llenar los identificadores correctamente (Tags, Meal category, Hide on Print)
+4.- Llenar las Recurrencias correctamente (start date, repeats, modify month, day,
+    Does not repeat )
+5.- grabar el Meal y que sea visible sin Recurrencia
+6.- esperar el mensaje:  This meal has been added succesfully
+7.- Recargar la pagina para eliminar la espera de tiempo eh ingresar a la captura de meal registrado
+    utilizando JavaScript y entrar y modificar Texto(Title, Description and image)
+8.- grabar la modificacion y que aparezca la nueva captura modificada
+
+
+importante:
+    * Utilizo Execute Javascript  para bajar o subir hasta el elemento y sea visible
+         Execute Javascript              window.scrollTo(0,document.body.scrollHeight)
+         Execute Javascript              window.scrollTo(0,document.body.scrollDown)
+
+
+
+
+
+
+
+Traslation:
+
+
+
+Monthly Breakfast of Recurrences
+
+important:
+* In this Firefox browser the start of the automation is slower.
+
+* Element inspection modification was made to enter the Dining window because its inspected element opened a different window (Activity) so the inspection element of the Repairs window was placed and that way it was possible to enter the window of dining.
+${Dinning} id=SideNav_Menu_Dinning you enter the activity window
+${Dinning} id=SideNav_Menu_Repairs if you can enter the dining window
+
+* to click the calendar button in the recurrences window, the Keyword "Press Keys" was used, since the "click element"
+  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
+
+ ${Calendar_Btn} id=Calendar_Btn_StartDate_add_dining_start_date
+  * Press Keys ${Calendar_Btn} Enter (correct)
+  * click element ${Calendar_Btn} (doesn't work)
+  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+ * to click the calendar button within the recurrences window, the Keyword "Press Keys" was used, since the "click element"
+  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
+   * Press Keys ${Calendar_Recurrences} Enter (correct)
+  ${Calendar_Recurrences} id=Calendar_Btn_undefined_EndDate
+  click element ${Calendar_Recurrences}
+  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+* within the recurrences window in "Does Not Repeat" entering the cancel button did not work your id
+  ${CancelBtnRecc} id=cancelRecurrence
+  # click element ${CancelBtnRecc}
+   execute javascript      document.getElementsByClassName('MuiGrid-root appbtn-engage greyCancelBtn-engage appbtnBarButton')[0].click()
+
+
+* choose a specific day within the calendar if it has an Id But it does not click on it, Execute Javascript is used
+  id="Calendar_Icon_Adornment_28"
+   execute javascript document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
+
+
+
+
+PR01 Automation to enter the Waterford Community Monthly Recurrence (Breakfast)
+
+Automation Monthly Recurrence
+
+General information
+
+1.- fill in the fields correctly (title, description, image)
+2.- enter Add translations Window
+    * enter french language button and return to Spanich(default) button
+    * close the window on the "OK" button
+3.- fill the identifiers correctly (Tags, Meal category, Hide on Print)
+4.- Fill in the Recurrences correctly (start date, repeats, modify month, day,
+    Does not repeat )
+5.- record the Meal and make it visible without Recurrence
+6.- wait for the message: This meal has been added succesfully
+7.- Reload the page to eliminate the waiting time and enter the registered meal capture
+    using JavaScript and enter and modify Text(Title, Description and image)
+8.- save the modification and the new modified capture appears
+
+
+important:
+    * I use Execute Javascript to move the element down or up to make it visible
+         Execute Javascript window.scrollTo(0,document.body.scrollHeight)
+         Execute Javascript window.scrollTo(0,document.body.scrollDown)

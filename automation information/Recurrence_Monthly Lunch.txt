@@ -1,0 +1,142 @@
+Cena Mensual de Recurrencias
+
+importante:
+* en este navegador Firefox el inicio de la automatizacion es mas lenta.
+
+* se hizo modificacion de inspeccion de elementos para entrar a la ventana de Dining pues su elemento inspeccionado abria una ventana diferente (Activity) asi que se le coloco el elemento de inspeccion de la ventana de Repairs y de esa forma se pudo entrar a la ventana de dining.
+${Dinning}                  id=SideNav_Menu_Dinning		entras a la ventana de activity
+${Dinning}                  id=SideNav_Menu_Repairs		si puedes entrar a la ventana dining
+
+* para dar click al boton de calendario en la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
+  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
+
+ ${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
+  * Press Keys         ${Calendar_Btn}    Enter (correcto)
+  * click element      ${Calendar_Btn}     (no funciona)
+  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+ * para dar click al boton de calendario dentro de la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
+  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
+   * Press Keys        ${Calendar_Recurrences}   Enter (correcto)
+  ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
+  click element       ${Calendar_Recurrences}
+  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+* elegir un dia en especifico dentro del calendario si tiene Id Pero no hace la funcion de dar click sobre el se utiliza Execute Javascript
+ id="Calendar_Icon_Adornment_10"
+  execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()
+
+
+
+
+
+
+PR01 Automatización para ingresar a Community Waterford Recurrencia Mensual (Cena)
+
+Automatización Recurrencia Mensual
+
+Información general
+
+1.- llenar los campos correctamente (title, description, image)
+2.- llenar los identificadores correctamente (Tags, Meal category(Lunch)(Hide on Print)
+3.- Llenar las Recurrencias correctamente (start date, repeats, modify month, day,
+    Recurrence Monthly)
+    * Modify The every Months
+    * On select simbol and modify Day
+    * verify message that appears after modifying month, days and occurrences in the recurrence window
+    * Save button Recurrence (close window)
+    * Verify that the message after closing the Recurrences window is the same as the one in Recurrences under Repeats(monthly)
+    * Save Recurrence and wait message alert " This meal has been added succesfully"
+    * reload page for eliminated waiting (code)
+    * wait message to alert
+    * select an unselect button Select All, enter in icon Menu Item, Meal, Date Served
+    * enter button Print and advanced visible the capturing the LUNCH
+    * utilizar Go back para retornar a la pagina principal de las capturas
+
+
+
+
+
+importante:
+         Utilizo Execute Javascript  para bajar o subir hasta el elemento y sea visible
+         Execute Javascript              window.scrollTo(0,document.body.scrollHeight)
+         Execute Javascript              window.scrollTo(0,document.body.scrollDown)
+
+
+
+
+
+
+
+
+
+
+traslation:
+
+Monthly recurrence dinner
+
+important:
+* In this Firefox browser the start of the automation is slower.
+
+* Element inspection modification was made to enter the Dining window because its inspected element opened a different window (Activity) so the inspection element of the Repairs window was placed and that way it was possible to enter the window of dining.
+${Dinning} id=SideNav_Menu_Dinning you enter the activity window
+${Dinning} id=SideNav_Menu_Repairs if you can enter the dining window
+
+* to click the calendar button in the recurrences window, the Keyword "Press Keys" was used, since the "click element"
+  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
+
+ ${Calendar_Btn} id=Calendar_Btn_StartDate_add_dining_start_date
+  * Press Keys ${Calendar_Btn} Enter (correct)
+  * click element ${Calendar_Btn} (doesn't work)
+  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+
+ * to click the calendar button within the recurrences window, the Keyword "Press Keys" was used, since the "click element"
+  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
+   * Press Keys ${Calendar_Recurrences} Enter (correct)
+  ${Calendar_Recurrences} id=Calendar_Btn_undefined_EndDate
+  click element ${Calendar_Recurrences}
+  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
+  type="button"> could not be scrolled into view
+
+* choose a specific day within the calendar if it has an Id But it does not click on it, Execute Javascript is used
+ id="Calendar_Icon_Adornment_10"
+  execute javascript document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()
+
+
+
+
+PR01 Automation to enter Community Waterford Monthly Recurrence (Dinner)
+
+Automation Monthly Recurrence
+
+General information
+
+1.- fill in the fields correctly (title, description, image)
+2.- fill the identifiers correctly (Tags, Meal category(Lunch)(Hide on Print)
+3.- Fill the Recurrences correctly (start date, repeats, modify month, day,
+    Recurrence Monthly)
+    * Modify The every Months
+    * On select symbol and modify Day
+    * verify message that appears after modifying month, days and occurrences in the recurrence window
+    * Save button Recurrence (close window)
+    * Verify that the message after closing the Recurrences window is the same as the one in Recurrences under Repeats(monthly)
+    * Save Recurrence and wait message alert "This meal has been added succesfully"
+    * reload page for eliminated waiting (code)
+    * wait message to alert
+    * select an unselect button Select All, enter in icon Menu Item, Meal, Date Served
+    * enter button Print and advanced visible the capturing the LUNCH
+    * use Go back to return to the main screenshot page
+
+
+
+
+
+important:
+         I use Execute Javascript to move down or up to the element and make it visible
+         Execute Javascript window.scrollTo(0,document.body.scrollHeight)
+         Execute Javascript window.scrollTo(0,document.body.scrollDown)
