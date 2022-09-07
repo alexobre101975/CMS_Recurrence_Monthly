@@ -28,14 +28,14 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 #  Enter Dinning Window
        scroll element into view            ${Dinning}
        wait until element is visible       ${Dinning}
-       mouse over                          ${Dinning}
+#       mouse over                          ${Dinning}
        double click element                ${Dinning}
 
 # Click Community Waterford
         scroll element into view            ${Community}
         wait until element is visible       ${Community}
         set focus to element                ${Community}
-         double click element                ${Community}
+        double click element                ${Community}
 
 
 

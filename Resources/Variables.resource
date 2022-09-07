@@ -4,7 +4,7 @@ ${website}       http://dev.www.engage360.evacompute.com:8080/
 ${Email}                    superUser
 ${Password}                 SuperAdmin1@
 ${Community}                SuperUserCombo
-${Waterford}                SuperUserCombo-option-28
+${Waterford}                SuperUserCombo-option-29
 ${Total_Opened}             id=repairPage_Image
 ${Dinning}                  id=SideNav_Menu_Repairs
 ${Add Menu Item}            id=dining_new_dining_btn
@@ -35,7 +35,7 @@ ${Delete_Dinning}           id=add_dining_delete_btn
 ${Delete_All_Recurrence}    id=close_repair_close_btn
 ${Text_Image}               id=id_dining_header_list_image
 ${text Menu Item}           id=id_dining_header_list_menu_item
-${Menu_Items}               dining_title
+${Menu_Items}               id=boards-tab-0
 ${Button No,Exit}           id=close_repair_return_btn
 ${Menu Item}                id=menu_item_deletetion_modal
 ${Icon_Meal}                id=id_dining_header_list_meal
@@ -71,7 +71,7 @@ ${back_month}               id=calendarHeader_leftArrow
 ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
 ${Last30Days}               id=scheduler_switch_two_options_LeftOption
 ${Last7Days}                id=scheduler_switch_two_options_RightOption
-${Add_translations}          //*[@id="root"]/div[1]/div/div/main/div[2]/div/main/div/div/form/button
+${Add_translations}          //body/div[@id='root']/div[1]/div[1]/div[1]/main[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/button[1]
 ${sept22}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
 ${sept27}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[30].click()
 ${oct28}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[33].click()
