@@ -1,561 +1,693 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220920 10:33:07.198" rpa="false" schemaversion="2">
-<suite id="s1" name="Recurre Month Dinner" source="C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\Recurre_Month_Dinner.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220921 08:48:54.564" rpa="false" schemaversion="2">
+<suite id="s1" name="Recurre Month Break" source="C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\Recurre_Month_Break.robot">
 <kw name="web setup" library="Keywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${website}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220920 10:33:07.366" level="INFO">Opening browser 'firefox' to base url 'http://dev.www.engage360.evacompute.com:8080/'.</msg>
-<msg timestamp="20220920 10:33:07.367" level="INFO">Firefox driver log is always forced to to: C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\geckodriver-1.log</msg>
-<status status="PASS" starttime="20220920 10:33:07.366" endtime="20220920 10:33:19.062"/>
+<msg timestamp="20220921 08:48:54.796" level="INFO">Opening browser 'firefox' to base url 'http://dev.www.engage360.evacompute.com:8080/'.</msg>
+<msg timestamp="20220921 08:48:54.798" level="INFO">Firefox driver log is always forced to to: C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\geckodriver-3.log</msg>
+<status status="PASS" starttime="20220921 08:48:54.796" endtime="20220921 08:49:02.322"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220920 10:33:19.062" endtime="20220920 10:33:19.063"/>
+<status status="PASS" starttime="20220921 08:49:02.322" endtime="20220921 08:49:02.582"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15 s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220920 10:33:19.064" endtime="20220920 10:33:19.069"/>
+<status status="PASS" starttime="20220921 08:49:02.583" endtime="20220921 08:49:02.587"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css=#kc-header</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:19.069" endtime="20220920 10:33:19.668"/>
+<status status="PASS" starttime="20220921 08:49:02.587" endtime="20220921 08:49:02.976"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Log in to ENGAGE360</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220920 10:33:19.673" level="INFO">Page title is 'Log in to ENGAGE360'.</msg>
-<status status="PASS" starttime="20220920 10:33:19.668" endtime="20220920 10:33:19.673"/>
+<msg timestamp="20220921 08:49:02.980" level="INFO">Page title is 'Log in to ENGAGE360'.</msg>
+<status status="PASS" starttime="20220921 08:49:02.976" endtime="20220921 08:49:02.980"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=username</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:19.673" endtime="20220920 10:33:19.690"/>
+<status status="PASS" starttime="20220921 08:49:02.980" endtime="20220921 08:49:03.000"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=username</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:19.690" level="INFO">Clicking element 'id=username'.</msg>
-<status status="PASS" starttime="20220920 10:33:19.690" endtime="20220920 10:33:19.957"/>
+<msg timestamp="20220921 08:49:03.001" level="INFO">Clicking element 'id=username'.</msg>
+<status status="PASS" starttime="20220921 08:49:03.000" endtime="20220921 08:49:03.320"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=username</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:19.958" level="INFO">Typing text 'superUser' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20220920 10:33:19.958" endtime="20220920 10:33:19.972"/>
+<msg timestamp="20220921 08:49:03.320" level="INFO">Typing text 'superUser' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220921 08:49:03.320" endtime="20220921 08:49:03.335"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=password</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:19.973" level="INFO">Clicking element 'id=password'.</msg>
-<status status="PASS" starttime="20220920 10:33:19.972" endtime="20220920 10:33:20.237"/>
+<msg timestamp="20220921 08:49:03.335" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20220921 08:49:03.335" endtime="20220921 08:49:03.604"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:20.238" level="INFO">Typing text 'SuperAdmin1@' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20220920 10:33:20.237" endtime="20220920 10:33:20.252"/>
+<msg timestamp="20220921 08:49:03.605" level="INFO">Typing text 'SuperAdmin1@' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220921 08:49:03.605" endtime="20220921 08:49:03.622"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>name=login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:20.253" level="INFO">Clicking button 'name=login'.</msg>
-<status status="PASS" starttime="20220920 10:33:20.253" endtime="20220920 10:33:21.571"/>
+<msg timestamp="20220921 08:49:03.623" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20220921 08:49:03.623" endtime="20220921 08:49:05.157"/>
 </kw>
-<status status="PASS" starttime="20220920 10:33:07.366" endtime="20220920 10:33:21.572"/>
+<status status="PASS" starttime="20220921 08:48:54.795" endtime="20220921 08:49:05.158"/>
 </kw>
-<test id="s1-t1" name="PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)">
+<test id="s1-t1" name="PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>id=SuperUserCombo_open_btn</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:21.573" endtime="20220920 10:33:23.707"/>
+<status status="PASS" starttime="20220921 08:49:05.160" endtime="20220921 08:49:07.547"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>id=SuperUserCombo_open_btn</arg>
 <arg>enter</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220920 10:33:23.707" level="INFO">Sending key(s) ('enter',) to id=SuperUserCombo_open_btn element.</msg>
-<msg timestamp="20220920 10:33:24.025" level="INFO">Sending keys enter</msg>
-<status status="PASS" starttime="20220920 10:33:23.707" endtime="20220920 10:33:24.040"/>
+<msg timestamp="20220921 08:49:07.547" level="INFO">Sending key(s) ('enter',) to id=SuperUserCombo_open_btn element.</msg>
+<msg timestamp="20220921 08:49:07.873" level="INFO">Sending keys enter</msg>
+<status status="PASS" starttime="20220921 08:49:07.547" endtime="20220921 08:49:07.889"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Waterford}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:24.041" level="INFO">Clicking element 'SuperUserCombo-option-29'.</msg>
-<status status="PASS" starttime="20220920 10:33:24.041" endtime="20220920 10:33:24.286"/>
+<msg timestamp="20220921 08:49:07.890" level="INFO">Clicking element 'SuperUserCombo-option-30'.</msg>
+<status status="PASS" starttime="20220921 08:49:07.890" endtime="20220921 08:49:08.158"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Total_Opened}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:24.286" endtime="20220920 10:33:24.482"/>
+<status status="PASS" starttime="20220921 08:49:08.159" endtime="20220921 08:49:08.400"/>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Total_Opened}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:24.482" endtime="20220920 10:33:24.663"/>
+<status status="PASS" starttime="20220921 08:49:08.401" endtime="20220921 08:49:08.694"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Total_Opened}</arg>
 <arg>Total Opened</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220920 10:33:24.733" level="INFO">Element 'id=repairPage_Image' is displayed.</msg>
-<status status="PASS" starttime="20220920 10:33:24.663" endtime="20220920 10:33:24.733"/>
+<msg timestamp="20220921 08:49:08.708" level="INFO">Element 'id=repairPage_Image' is displayed.</msg>
+<status status="PASS" starttime="20220921 08:49:08.694" endtime="20220921 08:49:08.708"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${Total_Opened}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220920 10:33:24.734" level="INFO">Simulating Mouse Over on element 'id=repairPage_Image'.</msg>
-<status status="PASS" starttime="20220920 10:33:24.733" endtime="20220920 10:33:25.017"/>
+<msg timestamp="20220921 08:49:08.708" level="INFO">Simulating Mouse Over on element 'id=repairPage_Image'.</msg>
+<status status="PASS" starttime="20220921 08:49:08.708" endtime="20220921 08:49:08.998"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>${Dinning}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:25.018" level="INFO">Executing JavaScript:
+<msg timestamp="20220921 08:49:09.000" level="INFO">Executing JavaScript:
 document.getElementById('SideNav_Menu_Dinning').click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:25.018" endtime="20220920 10:33:25.217"/>
+<status status="PASS" starttime="20220921 08:49:08.999" endtime="20220921 08:49:09.223"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${Community}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:25.218" endtime="20220920 10:33:25.593"/>
+<status status="PASS" starttime="20220921 08:49:09.224" endtime="20220921 08:49:09.756"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Community}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:25.594" endtime="20220920 10:33:25.781"/>
+<status status="PASS" starttime="20220921 08:49:09.757" endtime="20220921 08:49:09.851"/>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Community}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:25.783" endtime="20220920 10:33:25.811"/>
+<status status="PASS" starttime="20220921 08:49:09.852" endtime="20220921 08:49:09.926"/>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <arg>${Community}</arg>
 <doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:25.813" level="INFO">Double clicking element 'SuperUserCombo'.</msg>
-<status status="PASS" starttime="20220920 10:33:25.813" endtime="20220920 10:33:26.228"/>
+<msg timestamp="20220921 08:49:09.927" level="INFO">Double clicking element 'SuperUserCombo'.</msg>
+<status status="PASS" starttime="20220921 08:49:09.927" endtime="20220921 08:49:10.280"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>${Add Menu Item}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:26.231" level="INFO">Executing JavaScript:
+<msg timestamp="20220921 08:49:10.281" level="INFO">Executing JavaScript:
 document.getElementById('dining_new_dining_btn').click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:26.229" endtime="20220920 10:33:26.389"/>
+<status status="PASS" starttime="20220921 08:49:10.280" endtime="20220921 08:49:10.486"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${dining_title}</arg>
-<arg>Rib-eye Steak and Salad</arg>
+<arg>Natural Juice</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:26.390" level="INFO">Typing text 'Rib-eye Steak and Salad' into text field 'id=add_dining_title'.</msg>
-<status status="PASS" starttime="20220920 10:33:26.389" endtime="20220920 10:33:27.521"/>
+<msg timestamp="20220921 08:49:10.487" level="INFO">Typing text 'Natural Juice' into text field 'id=add_dining_title'.</msg>
+<status status="PASS" starttime="20220921 08:49:10.486" endtime="20220921 08:49:11.558"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${dining_description}</arg>
-<arg>Rib-eye steak and creamy béarnaise sauce and vegetables</arg>
+<arg>carrot, cucumber, tomato, radish juices</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:27.523" level="INFO">Typing text 'Rib-eye steak and creamy béarnaise sauce and vegetables' into text field 'id=add_dining_description'.</msg>
-<status status="PASS" starttime="20220920 10:33:27.522" endtime="20220920 10:33:30.460"/>
+<msg timestamp="20220921 08:49:11.560" level="INFO">Typing text 'carrot, cucumber, tomato, radish juices' into text field 'id=add_dining_description'.</msg>
+<status status="PASS" starttime="20220921 08:49:11.559" endtime="20220921 08:49:14.146"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${image}</arg>
-<arg>Rib-eye</arg>
+<arg>Natural Juice</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:30.461" level="INFO">Typing text 'Rib-eye' into text field 'name=image_url'.</msg>
-<status status="PASS" starttime="20220920 10:33:30.461" endtime="20220920 10:33:30.719"/>
+<msg timestamp="20220921 08:49:14.149" level="INFO">Typing text 'Natural Juice' into text field 'name=image_url'.</msg>
+<status status="PASS" starttime="20220921 08:49:14.148" endtime="20220921 08:49:14.719"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Search}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:30.720" level="INFO">Clicking element 'id=dining_search_icon'.</msg>
-<status status="PASS" starttime="20220920 10:33:30.720" endtime="20220920 10:33:31.028"/>
+<msg timestamp="20220921 08:49:14.721" level="INFO">Clicking element 'id=dining_search_icon'.</msg>
+<status status="PASS" starttime="20220921 08:49:14.720" endtime="20220921 08:49:15.166"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id=image_1725835</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220921 08:49:15.169" endtime="20220921 08:49:15.746"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=image_866831</arg>
+<arg>id=image_1725835</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:31.029" level="INFO">Clicking element 'id=image_866831'.</msg>
-<status status="PASS" starttime="20220920 10:33:31.029" endtime="20220920 10:33:31.639"/>
+<msg timestamp="20220921 08:49:15.747" level="INFO">Clicking element 'id=image_1725835'.</msg>
+<status status="PASS" starttime="20220921 08:49:15.747" endtime="20220921 08:49:15.997"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${DONE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:31.640" level="INFO">Clicking element 'id=done_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:31.639" endtime="20220920 10:33:31.998"/>
+<msg timestamp="20220921 08:49:15.998" level="INFO">Clicking element 'id=done_btn'.</msg>
+<status status="PASS" starttime="20220921 08:49:15.998" endtime="20220921 08:49:16.299"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:31.999" level="INFO">Executing JavaScript:
+<msg timestamp="20220921 08:49:16.300" level="INFO">Executing JavaScript:
 window.scrollTo(0,document.body.scrollHeight)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:31.999" endtime="20220920 10:33:32.013"/>
+<status status="PASS" starttime="20220921 08:49:16.300" endtime="20220921 08:49:16.305"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Add_translations}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:16.306" level="INFO">Clicking button 'id=dining-translation-button'.</msg>
+<status status="PASS" starttime="20220921 08:49:16.306" endtime="20220921 08:49:16.724"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${French}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:16.725" level="INFO">Clicking element 'id=full-width-dining-tab-1'.</msg>
+<status status="PASS" starttime="20220921 08:49:16.724" endtime="20220921 08:49:17.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Spanish}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:17.009" level="INFO">Clicking element 'id=full-width-dining-tab-1'.</msg>
+<status status="PASS" starttime="20220921 08:49:17.004" endtime="20220921 08:49:17.329"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Lenguage_OK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:17.330" level="INFO">Clicking element 'id=ok-translation-modal-button'.</msg>
+<status status="PASS" starttime="20220921 08:49:17.330" endtime="20220921 08:49:17.625"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,document.body.scrollDown)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:32.014" level="INFO">Executing JavaScript:
+<msg timestamp="20220921 08:49:17.626" level="INFO">Executing JavaScript:
 window.scrollTo(0,document.body.scrollDown)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:32.013" endtime="20220920 10:33:32.065"/>
+<status status="PASS" starttime="20220921 08:49:17.625" endtime="20220921 08:49:17.631"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${tags}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:32.066" endtime="20220920 10:33:32.448"/>
+<status status="PASS" starttime="20220921 08:49:17.631" endtime="20220921 08:49:17.902"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${tags}</arg>
-<arg>Delicious</arg>
+<arg>Nutritious and Delicious</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:32.449" level="INFO">Typing text 'Delicious' into text field 'id=add_dining_tags'.</msg>
-<status status="PASS" starttime="20220920 10:33:32.449" endtime="20220920 10:33:32.905"/>
+<msg timestamp="20220921 08:49:17.903" level="INFO">Typing text 'Nutritious and Delicious' into text field 'id=add_dining_tags'.</msg>
+<status status="PASS" starttime="20220921 08:49:17.903" endtime="20220921 08:49:19.330"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${tags}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220920 10:33:32.906" level="INFO">Sending key(s) ('ENTER',) to id=add_dining_tags element.</msg>
-<msg timestamp="20220920 10:33:33.181" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220920 10:33:33.181" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220920 10:33:32.905" endtime="20220920 10:33:33.254"/>
+<msg timestamp="20220921 08:49:19.334" level="INFO">Sending key(s) ('ENTER',) to id=add_dining_tags element.</msg>
+<msg timestamp="20220921 08:49:19.621" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220921 08:49:19.621" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220921 08:49:19.332" endtime="20220921 08:49:19.711"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${tags}</arg>
-<arg>Super Dinner</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:33.256" level="INFO">Typing text 'Super Dinner' into text field 'id=add_dining_tags'.</msg>
-<status status="PASS" starttime="20220920 10:33:33.255" endtime="20220920 10:33:33.806"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${tags}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220920 10:33:33.808" level="INFO">Sending key(s) ('ENTER',) to id=add_dining_tags element.</msg>
-<msg timestamp="20220920 10:33:34.085" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220920 10:33:34.086" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220920 10:33:33.807" endtime="20220920 10:33:34.149"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Dinner}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:34.150" level="INFO">Clicking element 'id=icon_6155b016d8ca9945efb2e724'.</msg>
-<status status="PASS" starttime="20220920 10:33:34.150" endtime="20220920 10:33:34.456"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Breakfast}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220921 08:49:19.712" endtime="20220921 08:49:19.736"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <arg>${Hide_Print}</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:34.457" level="INFO">Selecting checkbox 'id=dining_hideOnPrinting_switch'.</msg>
-<status status="PASS" starttime="20220920 10:33:34.457" endtime="20220920 10:33:34.706"/>
+<msg timestamp="20220921 08:49:19.737" level="INFO">Selecting checkbox 'id=dining_hideOnPrinting_switch'.</msg>
+<status status="PASS" starttime="20220921 08:49:19.736" endtime="20220921 08:49:20.043"/>
 </kw>
 <kw name="Unselect Checkbox" library="SeleniumLibrary">
 <arg>${Hide_Print}</arg>
 <doc>Removes the selection of checkbox identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:34.707" level="INFO">Unselecting checkbox 'id=dining_hideOnPrinting_switch'.</msg>
-<status status="PASS" starttime="20220920 10:33:34.707" endtime="20220920 10:33:34.953"/>
+<msg timestamp="20220921 08:49:20.044" level="INFO">Unselecting checkbox 'id=dining_hideOnPrinting_switch'.</msg>
+<status status="PASS" starttime="20220921 08:49:20.043" endtime="20220921 08:49:20.321"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Start-Date}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:34.954" level="INFO">Clicking element 'id=add_dining_start_date'.</msg>
-<status status="PASS" starttime="20220920 10:33:34.953" endtime="20220920 10:33:35.186"/>
+<msg timestamp="20220921 08:49:20.322" level="INFO">Clicking element 'id=add_dining_start_date'.</msg>
+<status status="PASS" starttime="20220921 08:49:20.322" endtime="20220921 08:49:20.544"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Calendar_Btn}</arg>
 <arg>Enter</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220920 10:33:35.188" level="INFO">Sending key(s) ('Enter',) to id=Calendar_Btn_StartDate_add_dining_start_date element.</msg>
-<msg timestamp="20220920 10:33:35.632" level="INFO">Sending keys Enter</msg>
-<status status="PASS" starttime="20220920 10:33:35.187" endtime="20220920 10:33:35.662"/>
+<msg timestamp="20220921 08:49:20.547" level="INFO">Sending key(s) ('Enter',) to id=Calendar_Btn_StartDate_add_dining_start_date element.</msg>
+<msg timestamp="20220921 08:49:20.957" level="INFO">Sending keys Enter</msg>
+<status status="PASS" starttime="20220921 08:49:20.545" endtime="20220921 08:49:20.980"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${advance_month}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:35.665" level="INFO">Clicking element 'id=calendarHeader_rightArrow'.</msg>
-<status status="PASS" starttime="20220920 10:33:35.663" endtime="20220920 10:33:36.071"/>
+<msg timestamp="20220921 08:49:20.981" level="INFO">Clicking element 'id=calendarHeader_rightArrow'.</msg>
+<status status="PASS" starttime="20220921 08:49:20.980" endtime="20220921 08:49:21.455"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_month}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:21.457" level="INFO">Clicking element 'id=calendarHeader_leftArrow'.</msg>
+<status status="PASS" starttime="20220921 08:49:21.456" endtime="20220921 08:49:21.889"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>${oct10}</arg>
+<arg>${sept25}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:36.074" level="INFO">Executing JavaScript:
-document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()
+<msg timestamp="20220921 08:49:21.890" level="INFO">Executing JavaScript:
+document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:36.072" endtime="20220920 10:33:36.348"/>
+<status status="PASS" starttime="20220921 08:49:21.890" endtime="20220921 08:49:22.056"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${tags}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:36.349" endtime="20220920 10:33:36.651"/>
+<status status="PASS" starttime="20220921 08:49:22.057" endtime="20220921 08:49:22.362"/>
 </kw>
 <kw name="Mouse Down" library="SeleniumLibrary">
 <arg>${tags}</arg>
 <doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
-<msg timestamp="20220920 10:33:36.652" level="INFO">Simulating Mouse Down on element 'id=add_dining_tags'.</msg>
-<status status="PASS" starttime="20220920 10:33:36.652" endtime="20220920 10:33:36.994"/>
+<msg timestamp="20220921 08:49:22.363" level="INFO">Simulating Mouse Down on element 'id=add_dining_tags'.</msg>
+<status status="PASS" starttime="20220921 08:49:22.363" endtime="20220921 08:49:22.743"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${tags}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:36.995" level="INFO">Clicking element 'id=add_dining_tags'.</msg>
-<status status="PASS" starttime="20220920 10:33:36.995" endtime="20220920 10:33:37.212"/>
+<msg timestamp="20220921 08:49:22.744" level="INFO">Clicking element 'id=add_dining_tags'.</msg>
+<status status="PASS" starttime="20220921 08:49:22.743" endtime="20220921 08:49:22.962"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${Tab_Repeats}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:37.213" endtime="20220920 10:33:37.525"/>
+<status status="PASS" starttime="20220921 08:49:22.963" endtime="20220921 08:49:23.244"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Tab_Repeats}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:37.526" level="INFO">Clicking element 'id=RepeatValue'.</msg>
-<status status="PASS" starttime="20220920 10:33:37.525" endtime="20220920 10:33:37.883"/>
+<msg timestamp="20220921 08:49:23.245" level="INFO">Clicking element 'id=RepeatValue'.</msg>
+<status status="PASS" starttime="20220921 08:49:23.245" endtime="20220921 08:49:23.551"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Recurre_Monthly}</arg>
+<arg>${Does_Not_Repeat}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:37.884" level="INFO">Clicking element 'id=RepeatValue-option-3'.</msg>
-<status status="PASS" starttime="20220920 10:33:37.883" endtime="20220920 10:33:38.382"/>
+<msg timestamp="20220921 08:49:23.552" level="INFO">Clicking element 'id=RepeatValue-option-0'.</msg>
+<status status="PASS" starttime="20220921 08:49:23.551" endtime="20220921 08:49:23.932"/>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <arg>${modify_day}</arg>
 <doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:38.383" level="INFO">Double clicking element 'id=RepeatInterval'.</msg>
-<status status="PASS" starttime="20220920 10:33:38.383" endtime="20220920 10:33:38.708"/>
+<msg timestamp="20220921 08:49:23.933" level="INFO">Double clicking element 'id=RepeatInterval'.</msg>
+<status status="PASS" starttime="20220921 08:49:23.932" endtime="20220921 08:49:24.259"/>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>${modify_day}</arg>
-<arg>3</arg>
+<arg>10</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220920 10:33:38.710" level="INFO">Sending C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\3 to browser.</msg>
-<status status="PASS" starttime="20220920 10:33:38.709" endtime="20220920 10:33:38.805"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Simbol_on_day2}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:38.806" level="INFO">Clicking element 'name=radio-btn_onT'.</msg>
-<status status="PASS" starttime="20220920 10:33:38.806" endtime="20220920 10:33:39.180"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PositionSelect}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:39.181" level="INFO">Clicking element 'id=OrdinalPositionSelect'.</msg>
-<status status="PASS" starttime="20220920 10:33:39.181" endtime="20220920 10:33:39.541"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Select_Fourth}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:39.542" level="INFO">Clicking element 'OrdinalPositionSelect-option-3'.</msg>
-<status status="PASS" starttime="20220920 10:33:39.542" endtime="20220920 10:33:39.776"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Date_Select}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:39.777" level="INFO">Clicking element 'id=MonthlyWeekDatSelect'.</msg>
-<status status="PASS" starttime="20220920 10:33:39.777" endtime="20220920 10:33:40.134"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Select_Saturday}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:40.135" level="INFO">Clicking element 'MonthlyWeekDatSelect-option-6'.</msg>
-<status status="PASS" starttime="20220920 10:33:40.135" endtime="20220920 10:33:40.368"/>
+<msg timestamp="20220921 08:49:24.261" level="INFO">Sending C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\10 to browser.</msg>
+<status status="PASS" starttime="20220921 08:49:24.260" endtime="20220921 08:49:24.446"/>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <arg>${modify_Occurrences}</arg>
 <doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:40.368" level="INFO">Double clicking element 'id=OccurrencesField'.</msg>
-<status status="PASS" starttime="20220920 10:33:40.368" endtime="20220920 10:33:40.753"/>
+<msg timestamp="20220921 08:49:24.447" level="INFO">Double clicking element 'id=OccurrencesField'.</msg>
+<status status="PASS" starttime="20220921 08:49:24.447" endtime="20220921 08:49:24.845"/>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>${modify_Occurrences}</arg>
-<arg>3</arg>
+<arg>20</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220920 10:33:40.754" level="INFO">Sending C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\3 to browser.</msg>
-<status status="PASS" starttime="20220920 10:33:40.754" endtime="20220920 10:33:40.826"/>
+<msg timestamp="20220921 08:49:24.849" level="INFO">Sending C:\Users\Alejandro\Desktop\CMS_Recurrence_Monthly\20 to browser.</msg>
+<status status="PASS" starttime="20220921 08:49:24.848" endtime="20220921 08:49:25.072"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SaveRecurrence}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:25.073" level="INFO">Clicking element 'id=saveRecurrenceObj'.</msg>
+<status status="PASS" starttime="20220921 08:49:25.073" endtime="20220921 08:49:25.339"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=EndSelection</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:25.340" level="INFO">Clicking element 'id=EndSelection'.</msg>
+<status status="PASS" starttime="20220921 08:49:25.340" endtime="20220921 08:49:25.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${On_this_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:25.635" level="INFO">Clicking element 'EndSelection-option-1'.</msg>
+<status status="PASS" starttime="20220921 08:49:25.635" endtime="20220921 08:49:25.981"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Calendar_Recurrences}</arg>
+<arg>Enter</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220921 08:49:25.982" level="INFO">Sending key(s) ('Enter',) to id=Calendar_Btn_undefined_EndDate element.</msg>
+<msg timestamp="20220921 08:49:26.591" level="INFO">Sending keys Enter</msg>
+<status status="PASS" starttime="20220921 08:49:25.981" endtime="20220921 08:49:26.644"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${sept27}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220921 08:49:26.645" level="INFO">Executing JavaScript:
+document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[30].click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20220921 08:49:26.644" endtime="20220921 08:49:26.931"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${SaveRecurrence}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220921 08:49:26.932" level="INFO">Simulating Mouse Down on element 'id=saveRecurrenceObj'.</msg>
+<status status="PASS" starttime="20220921 08:49:26.932" endtime="20220921 08:49:27.229"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${SaveRecurrence}</arg>
+<arg>id=cancelRecurrence</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:40.826" endtime="20220920 10:33:41.087"/>
+<status status="PASS" starttime="20220921 08:49:27.230" endtime="20220921 08:49:27.495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=cancelRecurrence</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220921 08:49:27.495" endtime="20220921 08:49:27.515"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${SaveRecurrence}</arg>
+<arg>id=cancelRecurrence</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:41.088" level="INFO">Clicking element 'id=saveRecurrenceObj'.</msg>
-<status status="PASS" starttime="20220920 10:33:41.088" endtime="20220920 10:33:41.477"/>
+<msg timestamp="20220921 08:49:27.515" level="INFO">Clicking element 'id=cancelRecurrence'.</msg>
+<status status="PASS" starttime="20220921 08:49:27.515" endtime="20220921 08:49:27.829"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Tab_Repeats}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220921 08:49:27.830" endtime="20220921 08:49:28.088"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Tab_Repeats}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:28.089" level="INFO">Clicking element 'id=RepeatValue'.</msg>
+<status status="PASS" starttime="20220921 08:49:28.089" endtime="20220921 08:49:28.312"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Start-Date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:28.313" level="INFO">Clicking element 'id=add_dining_start_date'.</msg>
+<status status="PASS" starttime="20220921 08:49:28.312" endtime="20220921 08:49:28.587"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${Save_btn}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:41.477" endtime="20220920 10:33:41.757"/>
+<status status="PASS" starttime="20220921 08:49:28.589" endtime="20220921 08:49:28.868"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${Save_btn}</arg>
 <arg>Save</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220920 10:33:41.758" level="INFO">Verifying element 'id=add_dining_save_btn' contains exact text 'Save'.</msg>
-<status status="PASS" starttime="20220920 10:33:41.758" endtime="20220920 10:33:41.770"/>
+<msg timestamp="20220921 08:49:28.869" level="INFO">Verifying element 'id=add_dining_save_btn' contains exact text 'Save'.</msg>
+<status status="PASS" starttime="20220921 08:49:28.869" endtime="20220921 08:49:28.881"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Save_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:41.771" level="INFO">Clicking element 'id=add_dining_save_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:41.771" endtime="20220920 10:33:42.493"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Save_btn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:42.494" level="INFO">Clicking element 'id=add_dining_save_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:42.493" endtime="20220920 10:33:42.801"/>
+<msg timestamp="20220921 08:49:28.882" level="INFO">Clicking element 'id=add_dining_save_btn'.</msg>
+<status status="PASS" starttime="20220921 08:49:28.882" endtime="20220921 08:49:29.167"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Message_Accept}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:42.801" endtime="20220920 10:33:44.153"/>
+<status status="PASS" starttime="20220921 08:49:29.167" endtime="20220921 08:49:31.132"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Message_Accept}</arg>
 <arg>This meal has been added succesfully</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220920 10:33:44.441" level="INFO">Element 'id=alert_AddDining_Success' is displayed.</msg>
-<status status="PASS" starttime="20220920 10:33:44.155" endtime="20220920 10:33:44.441"/>
+<msg timestamp="20220921 08:49:31.219" level="INFO">Element 'id=alert_AddDining_Success' is displayed.</msg>
+<status status="PASS" starttime="20220921 08:49:31.133" endtime="20220921 08:49:31.220"/>
 </kw>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220920 10:33:44.442" endtime="20220920 10:33:52.839"/>
+<status status="PASS" starttime="20220921 08:49:31.220" endtime="20220921 08:49:33.850"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Text_Image}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220921 08:49:33.851" endtime="20220921 08:49:37.754"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Text_Image}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:52.839" endtime="20220920 10:33:55.861"/>
-</kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>${Text_Image}</arg>
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:55.862" endtime="20220920 10:33:56.027"/>
+<status status="PASS" starttime="20220921 08:49:37.755" endtime="20220921 08:49:37.787"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${Text_Image}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220920 10:33:56.028" level="INFO">Simulating Mouse Over on element 'id=id_dining_header_list_image'.</msg>
-<status status="PASS" starttime="20220920 10:33:56.027" endtime="20220920 10:33:56.336"/>
+<msg timestamp="20220921 08:49:37.788" level="INFO">Simulating Mouse Over on element 'id=id_dining_header_list_image'.</msg>
+<status status="PASS" starttime="20220921 08:49:37.788" endtime="20220921 08:49:38.079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text Menu Item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220921 08:49:38.079" endtime="20220921 08:49:38.091"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${text Menu Item}</arg>
+<arg>Menu Item</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220921 08:49:38.104" level="INFO">Element 'id=id_dining_header_list_menu_item' is displayed.</msg>
+<status status="PASS" starttime="20220921 08:49:38.092" endtime="20220921 08:49:38.104"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${text Menu Item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220921 08:49:38.105" level="INFO">Simulating Mouse Over on element 'id=id_dining_header_list_menu_item'.</msg>
+<status status="PASS" starttime="20220921 08:49:38.104" endtime="20220921 08:49:38.365"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Menu_Items}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220921 08:49:38.366" endtime="20220921 08:49:38.391"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Menu_Items}</arg>
+<arg>Menu Items</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220921 08:49:38.406" level="INFO">Element 'id=boards-tab-0' is displayed.</msg>
+<status status="PASS" starttime="20220921 08:49:38.392" endtime="20220921 08:49:38.406"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Menu_Items}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220921 08:49:38.407" level="INFO">Simulating Mouse Over on element 'id=boards-tab-0'.</msg>
+<status status="PASS" starttime="20220921 08:49:38.406" endtime="20220921 08:49:38.679"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Natural Juice')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220921 08:49:38.679" endtime="20220921 08:49:39.054"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Natural Juice')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:39.055" level="INFO">Clicking element '//div[contains(text(),'Natural Juice')]'.</msg>
+<status status="PASS" starttime="20220921 08:49:39.055" endtime="20220921 08:49:39.788"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.getElementsByClassName('MuiIconButton-label')[6].click()</arg>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220920 10:33:56.337" level="INFO">Executing JavaScript:
-document.getElementsByClassName('MuiIconButton-label')[6].click()
+<msg timestamp="20220921 08:49:39.789" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220920 10:33:56.336" endtime="20220920 10:33:56.442"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${Search_Button}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:56.443" endtime="20220920 10:33:56.740"/>
+<status status="PASS" starttime="20220921 08:49:39.788" endtime="20220921 08:49:39.796"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Search_Button}</arg>
+<arg>${image}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:56.741" endtime="20220920 10:33:56.752"/>
+<status status="PASS" starttime="20220921 08:49:39.797" endtime="20220921 08:49:39.919"/>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>${Search_Button}</arg>
+<arg>${image}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:56.753" endtime="20220920 10:33:56.766"/>
+<status status="PASS" starttime="20220921 08:49:39.920" endtime="20220921 08:49:40.034"/>
 </kw>
 <kw name="Mouse Down" library="SeleniumLibrary">
-<arg>${Search_Button}</arg>
+<arg>${image}</arg>
 <doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
-<msg timestamp="20220920 10:33:56.767" level="INFO">Simulating Mouse Down on element 'id=search_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:56.766" endtime="20220920 10:33:57.049"/>
+<msg timestamp="20220921 08:49:40.035" level="INFO">Simulating Mouse Down on element 'name=image_url'.</msg>
+<status status="PASS" starttime="20220921 08:49:40.034" endtime="20220921 08:49:40.556"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollDown)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220921 08:49:40.557" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollDown)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220921 08:49:40.557" endtime="20220921 08:49:40.563"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Search_Button}</arg>
+<arg>${dining_title}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:57.050" level="INFO">Clicking element 'id=search_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:57.050" endtime="20220920 10:33:57.328"/>
+<msg timestamp="20220921 08:49:40.564" level="INFO">Clicking element 'id=add_dining_title'.</msg>
+<status status="PASS" starttime="20220921 08:49:40.563" endtime="20220921 08:49:41.290"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${dining_title}</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220921 08:49:41.291" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to id=add_dining_title element.</msg>
+<msg timestamp="20220921 08:49:41.573" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20220921 08:49:41.573" level="INFO">Sending key A</msg>
+<msg timestamp="20220921 08:49:41.573" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20220921 08:49:41.573" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20220921 08:49:41.573" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20220921 08:49:41.290" endtime="20220921 08:49:41.579"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${clear_search}</arg>
+<arg>${dining_description}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:57.329" level="INFO">Clicking element 'id=dinings_clear_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:57.329" endtime="20220920 10:33:57.640"/>
+<msg timestamp="20220921 08:49:41.580" level="INFO">Clicking element 'id=add_dining_description'.</msg>
+<status status="PASS" starttime="20220921 08:49:41.580" endtime="20220921 08:49:41.853"/>
 </kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>id=filters_btn</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:57.641" level="INFO">Double clicking element 'id=filters_btn'.</msg>
-<status status="PASS" starttime="20220920 10:33:57.641" endtime="20220920 10:33:58.093"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${dining_description}</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220921 08:49:41.854" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to id=add_dining_description element.</msg>
+<msg timestamp="20220921 08:49:42.135" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20220921 08:49:42.135" level="INFO">Sending key A</msg>
+<msg timestamp="20220921 08:49:42.135" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20220921 08:49:42.135" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20220921 08:49:42.135" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20220921 08:49:41.854" endtime="20220921 08:49:42.266"/>
 </kw>
-<kw name="Click Image" library="SeleniumLibrary">
-<arg>https://engage360.s3.amazonaws.com/Icons/Categories/times-circle.svg</arg>
-<doc>Clicks an image identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:58.094" level="INFO">Clicking image 'https://engage360.s3.amazonaws.com/Icons/Categories/times-circle.svg'.</msg>
-<status status="PASS" starttime="20220920 10:33:58.093" endtime="20220920 10:33:58.422"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${dining_title}</arg>
+<arg>Natural Carrot Juice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:42.267" level="INFO">Typing text 'Natural Carrot Juice' into text field 'id=add_dining_title'.</msg>
+<status status="PASS" starttime="20220921 08:49:42.267" endtime="20220921 08:49:43.836"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${Button_SelectAll}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:58.422" endtime="20220920 10:33:58.702"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${dining_description}</arg>
+<arg>Carrot Juice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:43.837" level="INFO">Typing text 'Carrot Juice' into text field 'id=add_dining_description'.</msg>
+<status status="PASS" starttime="20220921 08:49:43.836" endtime="20220921 08:49:44.927"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${image}</arg>
+<arg>Carrot Juice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:44.930" level="INFO">Typing text 'Carrot Juice' into text field 'name=image_url'.</msg>
+<status status="PASS" starttime="20220921 08:49:44.928" endtime="20220921 08:49:45.337"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:45.338" level="INFO">Clicking element 'id=dining_search_icon'.</msg>
+<status status="PASS" starttime="20220921 08:49:45.337" endtime="20220921 08:49:45.719"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=image_1623157</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:45.721" level="INFO">Clicking element 'id=image_1623157'.</msg>
+<status status="PASS" starttime="20220921 08:49:45.719" endtime="20220921 08:49:46.522"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DONE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220921 08:49:46.525" level="INFO">Clicking element 'id=done_btn'.</msg>
+<status status="PASS" starttime="20220921 08:49:46.524" endtime="20220921 08:49:46.896"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220921 08:49:46.897" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220921 08:49:46.896" endtime="20220921 08:49:46.919"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Button_SelectAll}</arg>
+<arg>${Breakfast}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:58.703" endtime="20220920 10:33:58.714"/>
+<status status="PASS" starttime="20220921 08:49:46.920" endtime="20220921 08:49:46.952"/>
 </kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>${Button_SelectAll}</arg>
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:58.714" endtime="20220920 10:33:58.722"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Button_SelectAll}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:58.723" level="INFO">Clicking element 'id=addEditDevice_Headers_SelectAll'.</msg>
-<status status="PASS" starttime="20220920 10:33:58.723" endtime="20220920 10:33:59.017"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${delete_multiple}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220920 10:33:59.018" endtime="20220920 10:33:59.297"/>
-</kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>${delete_multiple}</arg>
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:59.297" endtime="20220920 10:33:59.304"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollDown)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220921 08:49:46.953" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollDown)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220921 08:49:46.952" endtime="20220921 08:49:46.957"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${delete_multiple}</arg>
+<arg>${Start-Date}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:59.304" level="INFO">Clicking element 'id=delete_multiple_dinings'.</msg>
-<status status="PASS" starttime="20220920 10:33:59.304" endtime="20220920 10:33:59.576"/>
+<msg timestamp="20220921 08:49:46.957" level="INFO">Clicking element 'id=add_dining_start_date'.</msg>
+<status status="PASS" starttime="20220921 08:49:46.957" endtime="20220921 08:49:47.258"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${delete_Yes}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220920 10:33:59.577" endtime="20220920 10:33:59.588"/>
-</kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>${delete_Yes}</arg>
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220920 10:33:59.588" endtime="20220920 10:33:59.594"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${Save_btn}</arg>
+<arg>Save</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220921 08:49:47.260" level="INFO">Verifying element 'id=add_dining_save_btn' contains exact text 'Save'.</msg>
+<status status="PASS" starttime="20220921 08:49:47.259" endtime="20220921 08:49:47.283"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${delete_Yes}</arg>
+<arg>${Save_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220920 10:33:59.595" level="INFO">Clicking element '//div[contains(text(),'Yes, Delete')]'.</msg>
-<status status="PASS" starttime="20220920 10:33:59.594" endtime="20220920 10:33:59.903"/>
+<msg timestamp="20220921 08:49:47.284" level="INFO">Clicking element 'id=add_dining_save_btn'.</msg>
+<status status="PASS" starttime="20220921 08:49:47.284" endtime="20220921 08:49:47.572"/>
 </kw>
 <tag>Case 1</tag>
 <tag>Validation Test</tag>
-<status status="PASS" starttime="20220920 10:33:21.572" endtime="20220920 10:33:59.903"/>
+<status status="PASS" starttime="20220921 08:49:05.158" endtime="20220921 08:49:47.573"/>
 </test>
 <doc>CMS-Engage360 Community Waterford</doc>
-<status status="PASS" starttime="20220920 10:33:07.199" endtime="20220920 10:33:59.905"/>
+<status status="PASS" starttime="20220921 08:48:54.566" endtime="20220921 08:49:47.574"/>
 </suite>
 <statistics>
 <total>
@@ -566,7 +698,7 @@ Without any arguments.</msg>
 <stat pass="1" fail="0" skip="0">Validation Test</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Recurre Month Dinner">Recurre Month Dinner</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Recurre Month Break">Recurre Month Break</stat>
 </suite>
 </statistics>
 <errors>
