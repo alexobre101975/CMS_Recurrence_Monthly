@@ -14,42 +14,30 @@ Resource    Resources/Keywords.resource
 PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
         [Tags]      Validation Test       Case 1
 
-# Open Community Waterford Engage360
+
 # Open Community Waterford Engage360
     scroll element into view            id=SuperUserCombo_open_btn
     press keys                           id=SuperUserCombo_open_btn            enter
     click element                       ${Waterford}
 
-# Select and unselect Last 30 Days , Last 7 Days
-    wait until element is visible       ${Last7Days}
-    set focus to element        ${Last7Days}
-   click element   ${Last7Days}
-   go back
-
 # Simulate click Total Opened Window
-        wait until element is visible       ${Total_Opened}
-        set focus to element                ${Total_Opened}
-        element should be visible           ${Total_Opened}      Total Opened
-        mouse over                          ${Total_Opened}
+     wait until element is visible       ${Total_Opened}
+     set focus to element                ${Total_Opened}
+     element should be visible           ${Total_Opened}      Total Opened
+     mouse over                          ${Total_Opened}
 
 #  Enter Dinning Window
-       scroll element into view            ${Dinning}
-       double click element          ${Dinning}
+    execute javascript              ${Dinning}
 
 # Click Community Waterford
-        scroll element into view           ${Community}
-        wait until element is visible      ${Community}
-        set focus to element               ${Community}
-        double click element               ${Community}
-
-
+     scroll element into view             ${Community}
+      wait until element is visible       ${Community}
+      set focus to element                ${Community}
+      double click element                ${Community}
 
 # Enter Button Add Menu Item
+    execute javascript         ${Add Menu Item}
 
-        wait until element is visible   ${Add Menu Item}
-        element text should be          ${Add Menu Item}         Add Menu Item
-        mouse down                      ${Add Menu Item}
-        double click element            ${Add Menu Item}
 
 
 
@@ -254,9 +242,8 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
 
 
 
-# click Button print
+# visible the sheet print
     click element       id=PrintScheduleBtn
-
-    click element       ${Print_Close}
-
+# reload the page for eliminated the sheet the print
     go to       http://dev.www.engage360.evacompute.com:8080/dinings
+

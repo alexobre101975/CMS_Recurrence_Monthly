@@ -26,10 +26,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
         mouse over                          ${Total_Opened}
 
 #  Enter Dinning Window
-       scroll element into view            ${Dinning}
-       wait until element is visible       ${Dinning}
-#       mouse over                          ${Dinning}
-       double click element                ${Dinning}
+       execute javascript              ${Dinning}
 
 # Click Community Waterford
         scroll element into view            ${Community}
@@ -40,10 +37,11 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 
 
 # Enter Button Add Menu Item
+    execute javascript         ${Add Menu Item}
 
-        wait until element is visible   ${Add Menu Item}
-        element text should be          ${Add Menu Item}         Add Menu Item
-        click element                   ${Add Menu Item}
+
+
+
 
 
 
@@ -131,7 +129,8 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
     click element       ${back_month}
 
 # Modify Date New Month and new day
-     execute javascript      ${sept22}
+     execute javascript      ${sept25}
+
 
 # Visible Repets "Does Not Repeat"
    scroll element into view            ${tags}
@@ -175,8 +174,9 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
    mouse down      ${SaveRecurrence}
 
 # click button Cancel
-    execute javascript      document.getElementsByClassName('MuiGrid-root appbtn-engage greyCancelBtn-engage appbtnBarButton')[0].click()
-
+    scroll element into view            id=cancelRecurrence
+    wait until element is visible       id=cancelRecurrence
+    click element                       id=cancelRecurrence
 
 # click fill Repeats
    scroll element into view             ${Tab_Repeats}
@@ -188,7 +188,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 #  Save Dinning
    scroll element into view    ${Save_btn}
    element text should be      ${Save_btn}     Save
-   click element        ${Save_btn}
+   click element               ${Save_btn}
 
 # Make the Alert message "This meal has been added succesfully" visible
    wait until element is visible        ${Message_Accept}
@@ -213,9 +213,8 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
      mouse over                             ${Menu_Items}
 
 # enter the capture and modify information enter the capture and modify information and image
-    scroll element into view            //div[contains(text(),'Natural Juice')]
+    scroll element into view             //div[contains(text(),'Natural Juice')]
     click element                        //div[contains(text(),'Natural Juice')]
-  # execute javascript       document.getElementsByClassName('MuiGrid-root rowEngageStyleList MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center')[0].click()
 
  # visible the Image (download to image)
    Execute Javascript              window.scrollTo(0,document.body.scrollHeight)

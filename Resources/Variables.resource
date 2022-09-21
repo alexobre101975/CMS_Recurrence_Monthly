@@ -6,8 +6,11 @@ ${Password}                 SuperAdmin1@
 ${Community}                SuperUserCombo
 ${Waterford}                SuperUserCombo-option-29
 ${Total_Opened}             id=repairPage_Image
-${Dinning}                  id=SideNav_Menu_Repairs
-${Add Menu Item}            id=dining_new_dining_btn
+${Dinning1}                  id=SideNav_Menu_Repairs
+${Add Menu Item1}            id=dining_new_dining_btn
+
+${Dinning}                  document.getElementById('SideNav_Menu_Dinning').click()
+${Add Menu Item}            document.getElementById('dining_new_dining_btn').click()
 ${dining_title}             id=add_dining_title
 ${dining_description}       id=add_dining_description
 ${image}                    name=image_url
@@ -48,17 +51,16 @@ ${left_arrow}               id=scheduler_left_arrow
 ${Print_Close}               //div[contains(text(),'X')]
 ${French}                    id=full-width-dining-tab-1
 ${Spanish}                   id=full-width-dining-tab-1
-${Lenguage_OK}               //div[contains(text(),'Ok')]
+${Lenguage_OK}               id=ok-translation-modal-button
 ${Simbol_on_day}             name=radio-btn_onD
 ${Simbol_on_day2}            name=radio-btn_onT
 ${PositionSelect}            id=OrdinalPositionSelect
 ${Select_Fourth}             OrdinalPositionSelect-option-3
 ${Date_Select}               id=MonthlyWeekDatSelect
 ${Select_Saturday}           MonthlyWeekDatSelect-option-6
-${Month_Recu_Window}         //body/div[3]/div[3]/div[1]/div[2]/div[1]/div[7]/div[1]
+${Month_Recu_Window}         id=recurrence-modal-label
 ${Month_Recu_Window1}        //div[contains(text(),'Occurs day 15 of every 3 months starting October')]
-
-${Print_Close}               //div[contains(text(),'X')]
+${Print_Close}               id=Print-modal-close-button
 ${Log_Print}                id=dining_print_icon
 ${Button_SelectAll}         id=addEditDevice_Headers_SelectAll
 ${Search_Button}            id=search_btn
@@ -71,8 +73,8 @@ ${back_month}               id=calendarHeader_leftArrow
 ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
 ${Last30Days}               id=scheduler_switch_two_options_LeftOption
 ${Last7Days}                id=scheduler_switch_two_options_RightOption
-${Add_translations}          //body/div[@id='root']/div[1]/div[1]/div[1]/main[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/button[1]
-${sept22}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
+${Add_translations}          id=dining-translation-button
+${sept25}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
 ${sept27}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[30].click()
 ${oct28}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[33].click()
 ${oct10}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()

@@ -13,33 +13,30 @@ Resource    Resources/Keywords.resource
 
 PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
         [Tags]      Validation Test       Case 1
-
 # Open Community Waterford Engage360
-     scroll element into view        ${Community}
-     wait until element is visible      id=SuperUserCombo_open_btn
-     set focus to element               id=SuperUserCombo_open_btn
-     click element          id=SuperUserCombo_open_btn
-     click Element          ${Waterford}
+    scroll element into view            id=SuperUserCombo_open_btn
+    press keys                           id=SuperUserCombo_open_btn            enter
+    click element                       ${Waterford}
 
 # Simulate click Total Opened Window
-      scroll element into view            ${Total_Opened}
-      element should be visible           ${Total_Opened}      Total Opened
-      mouse over                          ${Total_Opened}
+     wait until element is visible       ${Total_Opened}
+     set focus to element                ${Total_Opened}
+     element should be visible           ${Total_Opened}      Total Opened
+     mouse over                          ${Total_Opened}
 
 #  Enter Dinning Window
-#       scroll element into view            ${Dinning}
-       wait until element is visible       ${Dinning}
-       mouse over                          ${Dinning}
-       double click element                ${Dinning}
+    execute javascript              ${Dinning}
 
 # Click Community Waterford
-        scroll element into view           ${Community}
-        double click element               ${Community}
+     scroll element into view             ${Community}
+      wait until element is visible       ${Community}
+      set focus to element                ${Community}
+      double click element                ${Community}
 
 # Enter Button Add Menu Item
-        scroll element into view        ${Add Menu Item}
-        element text should be          ${Add Menu Item}         Add Menu Item
-        double click element            ${Add Menu Item}
+    execute javascript         ${Add Menu Item}
+
+
 
 
 
@@ -71,7 +68,6 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
  # visible the Image (download to image)
    Execute Javascript              window.scrollTo(0,document.body.scrollHeight)
 
-    Sleep   1
  # go up to the identifiers window
    Execute Javascript              window.scrollTo(0,document.body.scrollDown)
 
@@ -104,7 +100,6 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
 
 # complete Recurrences correctly
 
-
  # enter Star Date Calendar
    click element        ${Start-Date}
 
@@ -116,6 +111,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
 
 # Modify Date New Month and new day
   execute javascript      ${oct10}
+
 #  click Tab Tags
    scroll element into view            ${tags}
    mouse down                   ${tags}
@@ -133,10 +129,11 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
 
 # Modify Every Months (increase number of Months)
   double click element                ${modify_day}
-   choose file                         ${modify_day}           3
+   choose file                        ${modify_day}           3
 
 # Select Simbol
     click element        ${Simbol_on_day2}
+
 # Position Select Fourth
     click element        ${PositionSelect}
     click element       ${Select_Fourth}
@@ -182,7 +179,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
     wait until element is visible      ${Search_Button}
     set focus to element               ${Search_Button}
     mouse down                         ${Search_Button}
-    sleep       0.5
+#    sleep       0.5
     click element                      ${Search_Button}
 
 # Close search button
