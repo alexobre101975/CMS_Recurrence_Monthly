@@ -11,14 +11,14 @@ Resource    Resources/Keywords.resource
 
 *** Test Cases ***
 
-PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
-        [Tags]      Validation Test       Case 1
+PR02 Automation to enter Community Waterford Recurrence Monthly (Lunch)
+        [Tags]      Validation Test       Case 2
 
 
 # Open Community Waterford Engage360
-    scroll element into view            id=SuperUserCombo_open_btn
-    press keys                           id=SuperUserCombo_open_btn            enter
-    click element                       ${Waterford}
+    scroll element into view             ${Icon_Communities}
+    press keys                           ${Icon_Communities}          enter
+    click element                        ${Waterford}
 
 # Simulate click Total Opened Window
      wait until element is visible       ${Total_Opened}
@@ -134,23 +134,23 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
    scroll element into view             ${Tab_Repeats}
    click element                        ${Tab_Repeats}
 
-# click Does Not Repeat
+# click Recurrence Monthly
    click element         ${Recurre_Monthly}
 
 
 # Visible the window Recurrence and click button save
 
 # Modify Every Months (increase number of Months)
-  double click element                ${modify_day}
+  double click element                 ${modify_day}
    choose file                         ${modify_day}           3
 
 # Select Simbol on day
     click element        ${Simbol_on_day}
 
 # Modify on day
-    double click element        name=monthlyDayNumber
-    Press Keys                  name=monthlyDayNumber      CTRL+A+DELETE
-    choose file                 name=monthlyDayNumber          15
+    double click element        ${Modify_on_day}
+    Press Keys                  ${Modify_on_day}        CTRL+A+DELETE
+    choose file                 ${Modify_on_day}            15
 
 # Increase Occurrences
    double click element            ${modify_Occurrences}
@@ -184,33 +184,35 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
 # Reload page to eliminate waiting
     reload page
 
-## Button select All
-    scroll element into view                ${Button_SelectAll}
-    wait until element is visible           ${Button_SelectAll}
-    set focus to element                    ${Button_SelectAll}
-    mouse down                              ${Button_SelectAll}
+# enter the registered meal capture
+    scroll element into view        ${Chicken Breast}
+    click element                   ${Chicken Breast}
 
-# select and unselect button Select All
-    double click element                         ${Button_SelectAll}
+# return to screenshots page
+    scroll element into view     ${Waterford Community Meals}
+    click element      ${Waterford Community Meals}
 
 # simulate click and image Title
     wait until element is visible        ${Text_Image}
     mouse over                           ${Text_Image}
 
+# Button select All
+    scroll element into view                ${Button_SelectAll}
+    click element                           ${Button_SelectAll}
+
+# Browse icons Item Menu, Meal, Date Served
 #  click  Icon Item Menu
-    execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[4].click()
-
+    sleep   2
+    execute javascript      ${Icon Item Menu}
+    sleep   2
 # click icon Meal
-    execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[5].click()
-
-
+    execute javascript      ${icon Meal}
+    sleep   2
 # click icon Date Served
-    execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[6].click()
+    execute javascript      ${Date Served}
 
 # enter button Print
     scroll element into view            ${Log_Print}
-    wait until element is visible       ${Log_Print}
-    set focus to element                ${Log_Print}
     click element                       ${Log_Print}
 
 # advanced simbol right_arrow
@@ -222,12 +224,8 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
 
     double click element        ${right_arrow}
 
-    double click element        ${right_arrow}
 
-    click element               ${right_arrow}
-
-
-## advanced simbol left_arrow
+ # Return simbol left_arrow
     double click element        ${left_arrow}
 
     double click element        ${left_arrow}
@@ -236,14 +234,15 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Lunch)
 
     double click element        ${left_arrow}
 
-    double click element        ${left_arrow}
-
-    click element               ${left_arrow}
-
+# click icon Close Print
+    click element           ${icon_Close_Print}
 
 
-# visible the sheet print
-    click element       id=PrintScheduleBtn
-# reload the page for eliminated the sheet the print
-    go to       http://dev.www.engage360.evacompute.com:8080/dinings
+# Enter Delete button Confirm Delete Menu Item
+    wait until element is visible       ${Delete_Menu_Items}
+    set focus to element                ${Delete_Menu_Items}
+    click element                       ${Delete_Menu_Items}
+
+# Click Button "Yes,Delete"
+    click element              ${delete_Yes}
 

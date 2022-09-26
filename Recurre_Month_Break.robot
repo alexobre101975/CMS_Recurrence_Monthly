@@ -4,7 +4,7 @@ Documentation       CMS-Engage360 Community Waterford
 Library    SeleniumLibrary
 
 Suite Setup        web setup
-#Suite Teardown    Close All Browsers
+Suite Teardown    Close All Browsers
 
 Resource    Resources/Variables.resource
 Resource    Resources/Keywords.resource
@@ -15,9 +15,9 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
         [Tags]      Validation Test       Case 1
 
 # Open Community Waterford Engage360
-    scroll element into view            id=SuperUserCombo_open_btn
-    press keys                           id=SuperUserCombo_open_btn            enter
-    click element                       ${Waterford}
+    scroll element into view             ${Icon_Communities}
+    press keys                           ${Icon_Communities}           enter
+    click element                        ${Waterford}
 
 # Simulate click Total Opened Window
         wait until element is visible       ${Total_Opened}
@@ -122,14 +122,17 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 # Enter Botton Calendar
     press keys             ${Calendar_Btn}      Enter
 
+
 # Click advance one month
-    click element       ${advance_month}
+    scroll element into view    ${advance_month}
+    double click element       ${advance_month}
 
 # Back One Month
+    scroll element into view        ${back_month}
     click element       ${back_month}
 
 # Modify Date New Month and new day
-     execute javascript      ${sept25}
+     execute javascript      ${oct23}
 
 
 # Visible Repets "Does Not Repeat"
@@ -147,7 +150,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 # Visible the window Recurrence and the button save inactive
 
 # Modify Every Weeks (increase number of weeks)
-  double click element                ${modify_day}
+   double click element                ${modify_day}
    choose file                         ${modify_day}           10
 
 # Increase Occurrences
@@ -164,19 +167,27 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 # Select on this Date
     click element      ${On_this_date}
 
-## enter the recurrences Calendar
+# enter the recurrences Calendar
     press keys            ${Calendar_Recurrences}     Enter
 
-# Modify a day in the month
-   execute javascript        ${sept27}
+# Click advance one month
+    scroll element into view    ${advance_month}
+    double click element        ${advance_month}
+
+# Back One Month
+    scroll element into view        ${back_month}
+    click element       ${back_month}
+
+## Modify a day in the month
+   execute javascript        ${oct25}
 
 # Simulate click Button Save Inactive
    mouse down      ${SaveRecurrence}
 
 # click button Cancel
-    scroll element into view            id=cancelRecurrence
-    wait until element is visible       id=cancelRecurrence
-    click element                       id=cancelRecurrence
+    scroll element into view            ${CancelBtn}
+    wait until element is visible       ${CancelBtn}
+    click element                       ${CancelBtn}
 
 # click fill Repeats
    scroll element into view             ${Tab_Repeats}
@@ -194,27 +205,12 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
    wait until element is visible        ${Message_Accept}
    element should be visible            ${Message_Accept}          This meal has been added succesfully
 
-# # Reload page to eliminate waiting
+# Reload page to eliminate waiting
     reload page
 
-# simulate click and image Title
-    scroll element into view             ${Text_Image}
-    wait until element is visible        ${Text_Image}
-    mouse over                           ${Text_Image}
-
-#  simulate click Item Menu
-     wait until element is visible        ${text Menu Item}
-     element should be visible            ${text Menu Item}          Menu Item
-     mouse over                           ${text Menu Item}
-
-# simulate click items Menu
-     wait until element is visible          ${Menu_Items}
-     element should be visible              ${Menu_Items}             Menu Items
-     mouse over                             ${Menu_Items}
-
 # enter the capture and modify information enter the capture and modify information and image
-    scroll element into view             //div[contains(text(),'Natural Juice')]
-    click element                        //div[contains(text(),'Natural Juice')]
+    scroll element into view             ${Natural Juice}
+    click element                        ${Natural Juice}
 
  # visible the Image (download to image)
    Execute Javascript              window.scrollTo(0,document.body.scrollHeight)
@@ -272,4 +268,79 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Breakfast)
 #  Save Dinning
    element text should be      ${Save_btn}     Save
    click element               ${Save_btn}
+
+
+#  Reload page to eliminate waiting
+    reload page
+
+# enter the registered meal capture
+    scroll element into view        ${Natural Juice}
+    click element                   ${Natural Juice}
+
+# Visible Repets "Does Not Repeat"
+   scroll element into view            ${tags}
+   mouse down       ${tags}
+   click element         ${tags}
+
+# click fill Repeats
+   scroll element into view             ${Tab_Repeats}
+   click element                        ${Tab_Repeats}
+
+# click Recurrence Monthly
+   click element         ${Recurre_Monthly}
+
+
+# Visible the window Recurrence and click button save
+
+# Modify Every Months (increase number of Months)
+  double click element                 ${modify_day}
+   choose file                         ${modify_day}           3
+
+# Select Simbol
+    click element        ${Simbol_on_day2}
+
+# select the day of recurrence
+    click element       ${PositionSelect}
+    click element       ${Select_Last}
+    click element       ${Date_Select}
+    click element       ${Select_Saturday}
+
+# Increase Occurrences
+   double click element            ${modify_Occurrences}
+   choose file                     ${modify_Occurrences}      5
+
+
+# save the Recurrences Monthly
+    click element           ${SaveRecurrence}
+
+# record Lunch capture
+    scroll element into view        ${Save_btn}
+    double click element            ${Save_btn}
+
+# Select Button select All
+    scroll element into view                ${Button_SelectAll}
+    mouse down                              ${Button_SelectAll}
+
+
+#  Reload page to eliminate waiting
+    reload page
+
+# enter the registered meal capture
+    scroll element into view        ${Natural Juice}
+    click element                   ${Natural Juice}
+
+# click tab $Waterford Community Meals
+    click element           ${Waterford Community Meals}
+
+# Select Button select All
+    scroll element into view                ${Button_SelectAll}
+    click element           ${Button_SelectAll}
+
+# Enter Delete button Confirm Delete Menu Item
+    wait until element is visible       ${Delete_Menu_Items}
+    set focus to element                ${Delete_Menu_Items}
+    click element                       ${Delete_Menu_Items}
+
+# Click Button "Yes,Delete"
+    click element              ${delete_Yes}
 

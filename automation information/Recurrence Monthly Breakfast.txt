@@ -1,46 +1,32 @@
 Desayuno Mensual de Recurrencias
 
-importante:
-* en este navegador Firefox el inicio de la automatizacion es mas lenta.
+* Esta Automatizacion se realizo Utilizando Navegador de Firefox
 
-* se hizo modificacion de inspeccion de elementos para entrar a la ventana de Dining pues su elemento inspeccionado abria una ventana diferente (Activity) asi que se le coloco el elemento de inspeccion de la ventana de Repairs y de esa forma se pudo entrar a la ventana de dining.
-${Dinning}                  id=SideNav_Menu_Dinning		entras a la ventana de activity
-${Dinning}                  id=SideNav_Menu_Repairs		si puedes entrar a la ventana dining
+* se utilizo JavaScript para entrar a estas ventanas pues la pruba se detenia en esta parte del codigo
+  ${Dinning}                  document.getElementById('SideNav_Menu_Dinning').click()
+  ${Add Menu Item}            document.getElementById('dining_new_dining_btn').click()
 
-* para dar click al boton de calendario en la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
-  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
-
+* en este navegador Firefox s tuvo que utilizar el Keyword "press Keys" para poder entrar al icon de calendario
+  el keyword click element no hace esa funcion.
  ${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
   * Press Keys         ${Calendar_Btn}    Enter (correcto)
-  * click element      ${Calendar_Btn}     (no funciona)
-  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
+
+  * elegir un dia en especifico dentro del calendario si tiene Id Pero no hace la funcion de dar click sobre el se utiliza Execute Javascript
+    id="Calendar_Icon_Adornment_23"
+    ${oct23}           document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
 
 
  * para dar click al boton de calendario dentro de la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
-  no realizaba la funcion de entrar al igual que tambien se puede usar el Keyword "Execute JavaScript"
+   no realizaba la funcion de entrar al igual que tambien se puede usar  "Execute JavaScript"
    * Press Keys        ${Calendar_Recurrences}   Enter (correcto)
-  ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
-  click element       ${Calendar_Recurrences}
-  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
+   ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
+    click element       ${Calendar_Recurrences}
 
+ * para modificar un dia en un mes el ID no funciona se tiene que dar clic con JavaScript
+   execute javascript        ${oct25}
 
-* dentro de la ventana de las recurrencias en "Does Not Repeat" el entrar al boton de cancel no funcino su id se utilizo javaScript
-  ${CancelBtnRecc}            id=cancelRecurrence
-  #   click element              ${CancelBtnRecc}
-   execute javascript      document.getElementsByClassName('MuiGrid-root appbtn-engage greyCancelBtn-engage appbtnBarButton')[0].click()
-
-
-* elegir un dia en especifico dentro del calendario si tiene Id Pero no hace la funcion de dar click sobre el se utiliza Execute Javascript
- id="Calendar_Icon_Adornment_28"
-  execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
-
-
-
-
-
-
+ * se utilizo Xpath para igresar a capturas creadas con el nombre de la captura y evitar la prueba falle
+   ${Natural Juice}             //div[contains(text(),'Natural Juice')]
 
 
 PR01 Automatización para ingresar a Comunidad Waterford Recurrencia Mensual (Desayuno)
@@ -50,18 +36,63 @@ Automatización Recurrencia Mensual
 Información general
 
 1.- llenar los campos correctamente (title, description, image)
+
 2.- enter Add translations Window
     * entrar boton de lenguaje french y regresar al boton Spanich(default)
     * cerrar la ventana en el boton de "OK"
-3.- llenar los identificadores correctamente (Tags, Meal category, Hide on Print)
-4.- Llenar las Recurrencias correctamente (start date, repeats, modify month, day,
-    Does not repeat )
-5.- grabar el Meal y que sea visible sin Recurrencia
-6.- esperar el mensaje:  This meal has been added succesfully
-7.- Recargar la pagina para eliminar la espera de tiempo eh ingresar a la captura de meal registrado
-    utilizando JavaScript y entrar y modificar Texto(Title, Description and image)
-8.- grabar la modificacion y que aparezca la nueva captura modificada
+    * subir hasta los identificadores usando Javascript
 
+3.- llenar los identificadores correctamente (Tags, Meal category, Hide on Print)
+
+4.- Llenar las Recurrencias correctamente (start date, repeats, modify month, day,
+    Does not repeat)
+
+5.- Visible la ventana Recurrencia y el botón guardar inactivo
+
+6.- ingrese a la sección En esta fecha y modifique el día
+    * haga clic en el campo FIN (dentro de la ventana Recurrencias)
+    * Seleccionar en esta fecha
+    * entrar en el calendario de recurrencias
+    * Simular dar clic boton de save(inactivo)
+
+7.- grabar el Meal
+
+6.- esperar el mensaje:  This meal has been added succesfully
+    * y que sea visible sin Recurrencia
+
+7.- Recargar la pagina para eliminar la espera de tiempo
+
+8.- ingresar a la captura de meal registrado
+    * utilizar Javascript para subir y bajar hasta el elemento
+
+10.- modificar Texto(Title, Description and image)
+
+11.- grabar la modificacion y que aparezca la nueva captura modificada
+
+12.- Recargar la pagina y eliminar la espera
+
+13.- ingresar a la captura modificada y crear la recurrencia mensual
+
+14.- entrar al tab de Repeats y seleccionar la recurrencia mensual
+     * Visible la ventana de la recurrencia mensual
+     * modificar la cantidad de meses
+     * seleccionar el simbolo y escoger el dia de la recurrencia
+     * incrementar las Ocurrencias
+     * grabar las recurrencias
+
+15.- grabar la captura de comida
+    * que aparezcan las recurrencias mensuales creadas
+
+16.- volver a recargar la pagina
+
+17.- entrar a una captura creada
+
+18.- regresar a la pagina principal click tab Waterford Community Meals
+
+19.- Seleccionar todas las capturas
+
+20.- subir hasta el boton de Delete Menu Items
+    * clic boton de si eliminar todo
 
 importante:
     * Utilizo Execute Javascript  para bajar o subir hasta el elemento y sea visible
@@ -77,44 +108,35 @@ importante:
 Traslation:
 
 
-
 Monthly Breakfast of Recurrences
 
-important:
-* In this Firefox browser the start of the automation is slower.
+* This Automation was done Using Firefox Browser
 
-* Element inspection modification was made to enter the Dining window because its inspected element opened a different window (Activity) so the inspection element of the Repairs window was placed and that way it was possible to enter the window of dining.
-${Dinning} id=SideNav_Menu_Dinning you enter the activity window
-${Dinning} id=SideNav_Menu_Repairs if you can enter the dining window
+* JavaScript was used to enter these windows because the test stopped at this part of the code
+  ${Dinning} document.getElementById('SideNav_Menu_Dinning').click()
+  ${Add Menu Item} document.getElementById('dining_new_dining_btn').click()
 
-* to click the calendar button in the recurrences window, the Keyword "Press Keys" was used, since the "click element"
-  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
-
+* in this browser Firefox s had to use the Keyword "press Keys" to be able to access the calendar icon
+  the keyword click element does not do that function.
  ${Calendar_Btn} id=Calendar_Btn_StartDate_add_dining_start_date
   * Press Keys ${Calendar_Btn} Enter (correct)
-  * click element ${Calendar_Btn} (doesn't work)
-  Message error: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
+
+  * choose a specific day within the calendar if it has an Id But it does not click on it, Execute Javascript is used
+    id="Calendar_Icon_Adornment_23"
+    ${oct23} document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
 
 
  * to click the calendar button within the recurrences window, the Keyword "Press Keys" was used, since the "click element"
-  it did not perform the function of entering as well as the Keyword "Execute JavaScript" can also be used
+   it did not perform the enter function as well as "Execute JavaScript" can also be used
    * Press Keys ${Calendar_Recurrences} Enter (correct)
-  ${Calendar_Recurrences} id=Calendar_Btn_undefined_EndDate
-  click element ${Calendar_Recurrences}
-  Message error: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
+   ${Calendar_Recurrences} id=Calendar_Btn_undefined_EndDate
+    click element ${Calendar_Recurrences}
 
+ * to modify a day in a month the ID does not work you have to click with JavaScript
+   execute javascript ${oct25}
 
-* within the recurrences window in "Does Not Repeat" entering the cancel button did not work your id
-  ${CancelBtnRecc} id=cancelRecurrence
-  # click element ${CancelBtnRecc}
-   execute javascript      document.getElementsByClassName('MuiGrid-root appbtn-engage greyCancelBtn-engage appbtnBarButton')[0].click()
-
-
-* choose a specific day within the calendar if it has an Id But it does not click on it, Execute Javascript is used
-  id="Calendar_Icon_Adornment_28"
-   execute javascript document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[25].click()
+ * Xpath was used to access captures created with the name of the capture and avoid the test failing
+   ${Natural Juice} //div[contains(text(),'Natural Juice')]
 
 
 
@@ -126,17 +148,63 @@ Automation Monthly Recurrence
 General information
 
 1.- fill in the fields correctly (title, description, image)
+
 2.- enter Add translations Window
     * enter french language button and return to Spanich(default) button
     * close the window on the "OK" button
+    * upload up to ids using Javascript
+
 3.- fill the identifiers correctly (Tags, Meal category, Hide on Print)
+
 4.- Fill in the Recurrences correctly (start date, repeats, modify month, day,
-    Does not repeat )
-5.- record the Meal and make it visible without Recurrence
+    Does not repeat)
+
+5.- Visible the Recurrence window and the inactive save button
+
+6.- Enter the On this date section and modify the day
+    * click on the END field (within the Recurrences window)
+    * Select on this date
+    * enter the recurrence calendar
+    * Simulate clicking save button (inactive)
+
+7.- Record the Meal
+
 6.- wait for the message: This meal has been added succesfully
-7.- Reload the page to eliminate the waiting time and enter the registered meal capture
-    using JavaScript and enter and modify Text(Title, Description and image)
-8.- save the modification and the new modified capture appears
+    * and make it visible without Recurrence
+
+7.- Reload the page to eliminate the waiting time
+
+8.- enter the registered meal capture
+    * use Javascript to move up and down to the element
+
+10.- modify Text(Title, Description and image)
+
+11.- save the modification and the new modified capture appears
+
+12.- Reload the page and eliminate the wait
+
+13.- enter the modified capture and create the monthly recurrence
+
+14.- enter the Repeats tab and select the monthly recurrence
+      * Visible monthly recurrence window
+      * modify the number of months
+      * select the symbol and choose the day of recurrence
+      * increase Occurrences
+      * record recurrences
+
+15.- record the food capture
+     * that the monthly recurrences created appear
+
+16.- reload the page
+
+17.- enter a capture created
+
+18.- return to the main page click tab Waterford Community Meals
+
+19.- Select all captures
+
+20.- Go up to the Delete Menu Items button
+     * click yes delete all button
 
 
 important:

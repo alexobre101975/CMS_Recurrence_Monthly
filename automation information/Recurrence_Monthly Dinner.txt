@@ -1,57 +1,35 @@
 
 Recurrencias Cena Mensual
 
-importante:
-* en este navegador Firefox el inicio de la automatizacion es mas lenta, se tuvo que incluir mensanjes de espera.
-     element should be visible       ${Community}    DASBOARD
-     element should be visible       ${Community}        THE DASHBOARD IS BEING LOADED
 
-despues de ingresar las credenciales correctas de la pagina principal en la pagina Keywords.resource
+* Esta Automatizacion se realizo Utilizando Navegador de Firefox
 
-* tambien para entrar a la comunidad para automatizar(Waterford) se le incluyo scroll element into view  
-  tambien codigo para los mensajes.
-     element should be visible       ${Community}    DASBOARD
-     element should be visible       ${Community}        THE DASHBOARD IS BEING LOADED
-y se elimino el drag and drop y solo se incluyo click elemento para entrar a la comunidad.
+* se utilizo JavaScript para entrar a estas ventanas pues la pruba se detenia en esta parte del codigo
+  ${Dinning}                  document.getElementById('SideNav_Menu_Dinning').click()
+  ${Add Menu Item}            document.getElementById('dining_new_dining_btn').click()
 
-* se hizo modificacion de inspeccion de elementos para entrar a la ventana de Dining pues su elemento inspeccionado abria una ventana diferente (Activity) asi que se le coloco el elemento de inspeccion de la ventana de Repairs y de esa forma se pudo entrar a la ventana de dining.
-${Dinning}                  id=SideNav_Menu_Dinning		entras a la ventana de activity
-
-${Dinning}                  id=SideNav_Menu_Repairs		si puedes entrar a la ventana dining
-
-* para entrar al boton de calendario dentro de la ventana de las recurrencias el elmento inspeccionado que tiene Id
- No realizaba su funcion que era entrar al calendario.
+* en este navegador Firefox s tuvo que utilizar el Keyword "press Keys" para poder entrar al icon de calendario
+  el keyword click element no hace esa funcion.
  ${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
-  click element       ${Calendar_Btn}
-  Message: Element <button id="Calendar_Btn_StartDate_add_dining_start_date" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
-  se Utilizo JavaScript y se inspecciono otro elemento el cual si funciono correctamente
-    class=MuiButtonBase-root MuiIconButton-root
-    execute javascript          document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[4].click()
+  * Press Keys         ${Calendar_Btn}    Enter (correcto)
+
+  * elegir un dia en especifico dentro del calendario si tiene Id Pero no hace la funcion de dar click sobre el se utiliza Execute Javascript
+    id="Calendar_Icon_Adornment_10"
+    ${oct10}           document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
 
 
-* Para avanzar mes siguiente dando clic al simbolo el elemento inspeccionado con su id no hizo la funcion de avanzar
-  ${advance_month}            id=calendarHeader_rightArrow
-  click element                  ${advance_month}
-  Message: Element with locator id=calendarHeader_rightArrow not found.
-  se utilizo javasScript se inspecciono otro elemento el cual si realiza la funcion de avanzar
-  MuiButtonBase-root MuiIconButton-root MuiPickersCalendarHeader-iconButton
-  execute javascript        document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersCalendarHeader-iconButton')[1].click()
+ * para dar click al boton de calendario dentro de la ventana de las recurrencias se utilizo el Keyword "Press Keys" pues el "click element"
+   no realizaba la funcion de entrar al igual que tambien se puede usar  "Execute JavaScript"
+   * Press Keys        ${Calendar_Recurrences}   Enter (correcto)
+   ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
+    click element       ${Calendar_Recurrences}
 
 
-* dentro de la ventana de las recurrencias en el calendario tenemos el mismo problema el id para entrar no funciona
-  ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
-  click element       ${Calendar_Recurrences}
-  Message: Element <button id="Calendar_Btn_undefined_EndDate" class="MuiButtonBase-root MuiIconButton-root calendarPadding"
-  type="button"> could not be scrolled into view
-  se utilizo javasScript se inspecciono otro elemento el cual si realiza la funcion
-  execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[7].click()
+ * se usa Xpath falta ID Para entrar al boton de Eliminar
+  ${delete_Yes}               //div[contains(text(),'Yes, Delete')]
 
 
-
-
-
-PR01 Automatización para ingreso a Comunidad Waterford Recurrencia Mensual (cena)
+PR03 Automatización para ingreso a Comunidad Waterford Recurrencia Mensual (cena)
 
 Recurrencia de automatización mensual
 

@@ -5,76 +5,78 @@ ${Email}                    superUser
 ${Password}                 SuperAdmin1@
 ${Community}                SuperUserCombo
 ${Waterford}                SuperUserCombo-option-30
+${Icon_Communities}          id=SuperUserCombo_open_btn
 ${Total_Opened}             id=repairPage_Image
-${Dinning1}                  id=SideNav_Menu_Repairs
-${Add Menu Item1}            id=dining_new_dining_btn
-
 ${Dinning}                  document.getElementById('SideNav_Menu_Dinning').click()
 ${Add Menu Item}            document.getElementById('dining_new_dining_btn').click()
 ${dining_title}             id=add_dining_title
 ${dining_description}       id=add_dining_description
 ${image}                    name=image_url
 ${Search}                   id=dining_search_icon
-${tags}                     id=add_dining_tags
-${Hide_Print}               id=dining_hideOnPrinting_switch
-${Start-Date}               id=add_dining_start_date
-
-${Breakfast}                id=icon_6155b016d8ca9945efb2e722
-${Lunch}                    id=icon_6155b016d8ca9945efb2e723
-${Dinner}                   id=icon_6155b016d8ca9945efb2e724
-${Does_Not_Repeat}          id=RepeatValue-option-0
-${Recurre_Monthly}          id=RepeatValue-option-3
-${CancelBtnRecc}            id=cancelRecurrence
-${Tab_Repeats}              id=RepeatValue
-${On_this_date}             EndSelection-option-1
-${Weekly_Recurrence}        id=RepeatValueWeekly
-${modify_day}               id=RepeatInterval
-${modify_Occurrences}       id=OccurrencesField
-${SaveRecurrence}           id=saveRecurrenceObj
-${Save_btn}                 id=add_dining_save_btn
-${Message_Accept}           id=alert_AddDining_Success
 ${DONE}                     id=done_btn
-${Delete_Dinning}           id=add_dining_delete_btn
-${Delete_All_Recurrence}    id=close_repair_close_btn
-${Text_Image}               id=id_dining_header_list_image
-${text Menu Item}           id=id_dining_header_list_menu_item
-${Menu_Items}               id=boards-tab-0
-${Button No,Exit}           id=close_repair_return_btn
-${Menu Item}                id=menu_item_deletetion_modal
-${Icon_Meal}                id=id_dining_header_list_meal
-${Date_Served}              id=id_dining_header_list_date_serve
-${Delete_Occurrence}        id=close_repair_close_btn
-${Log_Print}                id=dining_print_icon
-${Date Served}              id=id_dining_header_list_date_serve
-${right_arrow}              id=scheduler_right_arrow
-${left_arrow}               id=scheduler_left_arrow
-${Print_Close}               //div[contains(text(),'X')]
+${Add_translations}          id=dining-translation-button
 ${French}                    id=full-width-dining-tab-1
 ${Spanish}                   id=full-width-dining-tab-1
 ${Lenguage_OK}               id=ok-translation-modal-button
+${tags}                     id=add_dining_tags
+${Breakfast}                id=icon_6155b016d8ca9945efb2e722
+${Lunch}                    id=icon_6155b016d8ca9945efb2e723
+${Dinner}                   id=icon_6155b016d8ca9945efb2e724
+${Hide_Print}               id=dining_hideOnPrinting_switch
+${Start-Date}               id=add_dining_start_date
+${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
+${advance_month}            id=calendarHeader_rightArrow
+${back_month}               id=calendarHeader_leftArrow
+${oct23}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
+${Tab_Repeats}              id=RepeatValue
+${Does_Not_Repeat}          id=RepeatValue-option-0
+${modify_day}               id=RepeatInterval
+${modify_Occurrences}       id=OccurrencesField
+${SaveRecurrence}           id=saveRecurrenceObj
+${On_this_date}             EndSelection-option-1
+${oct25}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[30].click()
+${CancelBtn}                id=cancelRecurrence
+${Save_btn}                 id=add_dining_save_btn
+${Message_Accept}           id=alert_AddDining_Success
+${Text_Image}               id=id_dining_header_list_image
+${Natural Juice}             //div[contains(text(),'Natural Juice')]
+${oct28}                     document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[33].click()
+${Recurre_Monthly}           id=RepeatValue-option-3
 ${Simbol_on_day}             name=radio-btn_onD
-${Simbol_on_day2}            name=radio-btn_onT
-${PositionSelect}            id=OrdinalPositionSelect
-${Select_Fourth}             OrdinalPositionSelect-option-3
-${Date_Select}               id=MonthlyWeekDatSelect
-${Select_Saturday}           MonthlyWeekDatSelect-option-6
+${Modify_on_day}             name=monthlyDayNumber
 ${Month_Recu_Window}         id=recurrence-modal-label
 ${Month_Recu_Window1}        //div[contains(text(),'Occurs day 15 of every 3 months starting October')]
-${Print_Close}               id=Print-modal-close-button
-${Log_Print}                id=dining_print_icon
-${Button_SelectAll}         id=addEditDevice_Headers_SelectAll
+${Chicken Breast}             //div[contains(text(),'Chicken Breast')]
+${Waterford Community Meals}     id=add_dining_return_btn
+${Icon Item Menu}             document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[4].click()
+${icon Meal}                  document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[5].click()
+${Date Served}                document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root')[6].click()
+${right_arrow}              id=scheduler_right_arrow
+${left_arrow}               id=scheduler_left_arrow
+${icon_Close_Print}         id=Print-modal-close-button
+${Delete_Menu_Items}        id=delete_multiple_dinings
+${delete_Yes}               //div[contains(text(),'Yes, Delete')]
+${Natural Juice}             //div[contains(text(),'Natural Juice')]
+${Simbol_on_day2}            name=radio-btn_onT
+${PositionSelect}            id=OrdinalPositionSelect
+${Select_Last}               OrdinalPositionSelect-option-4
+${Date_Select}               id=MonthlyWeekDatSelect
+${Select_Saturday}           MonthlyWeekDatSelect-option-6
+${Delete_Dinning}           id=add_dining_delete_btn
+${Yes, Delete_All_Ocurrences}    id=close_repair_close_btn
+${oct10}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()
 ${Search_Button}            id=search_btn
 ${clear_search}             id=dinings_clear_btn
 ${delete_multiple}          id=delete_multiple_dinings
 ${delete_Yes}               //div[contains(text(),'Yes, Delete')]
-${Calendar_Btn}             id=Calendar_Btn_StartDate_add_dining_start_date
-${advance_month}            id=calendarHeader_rightArrow
-${back_month}               id=calendarHeader_leftArrow
+${Select_Fourth}             OrdinalPositionSelect-option-3
+${Button_SelectAll}         id=addEditDevice_Headers_SelectAll
+${Log_Print}                id=dining_print_icon
 ${Calendar_Recurrences}     id=Calendar_Btn_undefined_EndDate
-${Last30Days}               id=scheduler_switch_two_options_LeftOption
-${Last7Days}                id=scheduler_switch_two_options_RightOption
-${Add_translations}          id=dining-translation-button
-${sept25}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[28].click()
-${sept27}                   document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[30].click()
-${oct28}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[33].click()
-${oct10}                    document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[15].click()
+${btn_filters}              id=filters_btn
+
+
+
+
+
+

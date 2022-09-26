@@ -11,11 +11,11 @@ Resource    Resources/Keywords.resource
 
 *** Test Cases ***
 
-PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
-        [Tags]      Validation Test       Case 1
+PR03 Automation to enter Community Waterford Recurrence Monthly (Dinner)
+        [Tags]      Validation Test       Case 3
 # Open Community Waterford Engage360
-    scroll element into view            id=SuperUserCombo_open_btn
-    press keys                           id=SuperUserCombo_open_btn            enter
+    scroll element into view            ${Icon_Communities}
+    press keys                          ${Icon_Communities}        enter
     click element                       ${Waterford}
 
 # Simulate click Total Opened Window
@@ -172,14 +172,13 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
 
 
 # click icon Date Served
-    execute javascript      document.getElementsByClassName('MuiIconButton-label')[6].click()
+    execute javascript      ${Date Served}
 
 # click Search button
     scroll element into view           ${Search_Button}
     wait until element is visible      ${Search_Button}
     set focus to element               ${Search_Button}
     mouse down                         ${Search_Button}
-#    sleep       0.5
     click element                      ${Search_Button}
 
 # Close search button
@@ -188,7 +187,7 @@ PR01 Automation to enter Community Waterford Recurrence Monthly (Dinner)
 
 
 # enter filters button
-    double click element           id=filters_btn
+    double click element           ${btn_filters}
 
     click image      https://engage360.s3.amazonaws.com/Icons/Categories/times-circle.svg
 
